@@ -1,0 +1,7 @@
+[
+  "test_artist.py::TestArtist::test_top_track_artist",
+  "test_create_playlist.py::TestPostCreatePlayList::test_create_playlist",
+  "test_playlist.py::TestArtist::test_get_play_list",
+  "test_post_playlist_id_tracks.py::TestPutPlayList::test_post_play_list_id_tracks",
+  "test_put_play_list.py::TestPutPlayList::test_put_play_list"
+]

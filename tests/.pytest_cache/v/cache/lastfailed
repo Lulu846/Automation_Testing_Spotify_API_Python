@@ -1,0 +1,5 @@
+{
+  "test_playlist.py": true,
+  "test_playlist.py::TestArtist::test_get_play_list": true,
+  "test_post_playlist_id_tracks.py": true
+}
