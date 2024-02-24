@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 III. In constants.py file, replace your CLIENT_ID, CLIENT_SECRET values with the ones obtained in step 1.3 . Replace the USER_ID value with the one copied at step 1.4 :
 
-# SCOPE determines what  permisions the user has
+ SCOPE determines what  permisions the user has
 SCOPE = "user-read-private user-read-email playlist-modify-public playlist-modify-private user-library-modify ugc-image-upload user-library-read user-read-playback-position"
 
 # CLIENT_ID = 'YOUR CLIENT ID' # You can find it in the application dashboard
