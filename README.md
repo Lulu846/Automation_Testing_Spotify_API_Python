@@ -73,33 +73,36 @@ The class has the following methods implement:
 - get_token: generates the acces token 
 - authorization: calls subsequently all the previously defined methods
 
-6. Run the command below and copy the generated code in the constant ACCESS_TOKEN from the "AUTHORISATION.py" file
+#### Step 4 Preparing the requests
 
-pprint(request_access_token(authorization_code).json()['access_token'])
+In order to be able to validate the Api from the Spotify documentation, we need to map them into the Pycharm Automation Framework
+The Spotify Api documentation can be found [here](https://developer.spotify.com/documentation/web-api)
+All the requests were mapped into python files and grouped under one single folder called <i>requests_folder</i>
 
-‼️ The generated token is available for 60 minutes. After the time expires, you need to follow again the steps from Authentication chapter
+#### Step 5 Preparing the tests
 
-For more information you can follow the following URLs:
+After mapping the Api requests into methods these were called into some tests methods created into separate python files and grouped under one single folder called <i>tests</i>
+The following endpoints were covered throught tests
+<ul>
+<li> https://api.spotify.com/v1/artists/{artist_id}</li>
+<li>https://api.spotify.com/v1/artists/{artist_id}/top-tracks?market={country}</li>
+<li>https://api.spotify.com/v1/markets?markets={country}</li>
+<li>https://api.spotify.com/v1/playlists/{playlist_id}</li>
+<li>https://api.spotify.com/v1/playlists/{playlist_id}</li>
+<li>https://api.spotify.com/v1/users/{user_id}/playlists</li>
+<li>https://api.spotify.com/v1/playlists/{playlist_id}/tracks</li>
+<li>https://api.spotify.com/v1/users/{user_id}/playlists</li>
 
-1. Spotify API authorization guide: https://developer.spotify.com/documentation/web-api/concepts/authorization
+#### Step 6 Running the tests
 
-2. Google OAuth2 authorization standard: https://pkg.go.dev/golang.org/x/oauth2/google
-
-Step 4 Running the tests
-
-The tests can be found in the tests folder. To run any test, you can run the corresponding file.
-
-For example, in the test_artist.py file, you can run the tests suite pressing the green triangle found to the left of the TestArtist(unittest.TestCase) class. If you want to run only one test, press the green triangle found to the left 
-of the function which describes the desired test, for example the function test_artist_check_status()
+In order to run the tests we can use the following command <b>pytest tests --html=test-report.html<b>
+Below you can find the test report that was generated through running the test suite:
 
 ![image](https://github.com/Lulu846/Automation_Testing_Spotify_API_Python/assets/129788963/ad45cbbf-ead8-4c3a-8ed3-553cd05ee9b0)
 
-Step 5 Generating the report
+#### Step 7 Analysing the results
 
-To generate the report, run the Terminal command:
-
-pytest --html=report.html
-An HTML file will be created in the project main directory, which can be opened with any browser.
+Through analysing the test execution report I noticed that one of the test was failed. After debugging and manual reproduction I discovered  and reported a defect.
 
 
 
